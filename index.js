@@ -7,6 +7,11 @@ const {initializeDBConnection}=require("./db/db.js");
 const {errorHandler }  = require("./middlewares/error-handler.middleware.js");
 const {routeNotFound} = require("./middlewares/404-route-handler.middleware.js");
 
+const {videoRouter} = require("./routes/video.route");
+const {historyRouter} = require("./routes/history.route");
+const {likedRouter} = require("./routes/liked.route");
+const {playlistRouter} = require("./routes/playlist.route");
+
 const app = express();
 const PORT= 4001;
 app.use(cors());
